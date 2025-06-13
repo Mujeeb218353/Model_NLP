@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Use port 8000 locally or $PORT on Railway
-PORT=${PORT:-8000}
+PORT=${ PORT:-8000 }
 
 # Train model
 python -c "from app.utils import train_and_save_model; train_and_save_model()"
