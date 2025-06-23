@@ -1,14 +1,13 @@
 from fastapi import FastAPI
-from app.schema import ResumeRequest, PredictionResponse
-from app.model import predict_profession
+from app.schema import GenderRequest, GenderResponse
+from app.model import predict_gender
 
-app = FastAPI(title="Resume Profession Predictor", version="1.0")
+app = FastAPI(title="Gender Predictor by Name", version="1.0")
 
 @app.get("/")
 def read_root():
-    return {"message": "Resume NLP API is up and running"}
+    return {"message": "🎉 Gender Prediction API is up and running!"}
 
-@app.post("/predict", response_model=PredictionResponse)
-def predict(req: ResumeRequest):
-    profession = predict_profession(req.resume_text)
-    return PredictionResponse(profession=profession)
+@app.post("/predict", response_model=GenderResponse)
+def predict(req: GenderRequest):
+    return predict_gender(req.name)

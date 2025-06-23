@@ -4,3 +4,4 @@ pandas
 scikit-learn
 sentence-transformers
 joblib
+numpy

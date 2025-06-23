@@ -1,7 +1,11 @@
+# app/schema.py
+
 from pydantic import BaseModel
 
-class ResumeRequest(BaseModel):
-    resume_text: str
+class GenderRequest(BaseModel):
+    name: str
 
-class PredictionResponse(BaseModel):
-    profession: str
+class GenderResponse(BaseModel):
+    name: str
+    gender: str
+    confidence: float
