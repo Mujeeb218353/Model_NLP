@@ -1,6 +1,6 @@
-# Resume Profession Prediction API
+# Gender By Name Prediction API
 
-This project uses a BERT-based model to predict profession categories based on resume text using FastAPI.
+This project uses a BERT-based model to predict gender by name FastAPI.
 
 ## Steps to Run
 
